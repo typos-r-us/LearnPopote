@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">LearnPopote</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="access_your_classes_on_phone"> <b><i>Learn, Popote Ulipo!  </i></b></string>
+    <string name="skip">Skip</string>
+    <string name="title">LEARN</string>
+    <string name="tag">…popote ulipo…</string>
+    <string name="mobile_learning">Mobile Learning</string>
+    <string name="copy">An app by Kenneth Mwenda</string>
+    <string name="name">Your Name</string>
+    <string name="nameHint">Please enter 2 names.</string>
+    <string name="email">Email Address</string>
+    <string name="emailHint">someone@example.com</string>
+    <string name="phone">Phone Number</string>
+    <string name="phoneHint">+254 *** *** ****</string>
+    <string name="password">Password</string>
+    <string name="passHint">Your Password</string>
+    <string name="repeatPassword">Confirm Password</string>
+    <string name="pass2Hint">Password Again</string>
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up</string>
+    <string name="forgotPass">Forgot Password</string>
+    <string name="slideAlt">Slide main image</string>
+    <string name="pagerIndicator">Pager indicator</string>
+    <string name="goToLogin">Go to login</string>
+    <string name="fbButtonAlt">Login with Facebook</string>
+    <string name="googleButtonAlt">Login with Google</string>
+    <string name="appLogoAlt">Application logo</string>
+    <string name="bgImageAlt">Background image</string>
+
+    <string name="step1">Step 1</string>
+    <string name="step2">Step 2</string>
+    <string name="step3">Step 3</string>
+    <string name="selectCourse">Select from our wide range<br />of courses.</string>
+    <string name="accessCourse">Access courses on any device,<br />any time.</string>
+    <string name="completeCourse">Completion certificates issued <br />to all successful students!</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
