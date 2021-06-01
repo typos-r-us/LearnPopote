@@ -21,14 +21,11 @@ class LoginActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setText(R.string.login))
         tabLayout.addTab(tabLayout.newTab().setText(R.string.signUp))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
-        //tabLayout.setupWithViewPager(viewPager) //
-
 
         val adapter = LoginFragmentAdapter(supportFragmentManager,this,tabLayout.tabCount)
         viewPager.adapter = adapter
 
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-
 
         // animate the widgets
         fbButton.animate().translationY(300.0F)
