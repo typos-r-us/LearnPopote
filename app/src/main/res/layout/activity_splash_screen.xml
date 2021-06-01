@@ -44,7 +44,7 @@
         android:text="@string/title"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="90sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
         android:text="@string/tag"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"

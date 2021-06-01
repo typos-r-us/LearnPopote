@@ -9,8 +9,8 @@
     <string name="tag">…popote ulipo…</string>
     <string name="mobile_learning">Mobile Learning</string>
     <string name="copy">An app by Kenneth Mwenda</string>
-    <string name="name">Your Name</string>
-    <string name="nameHint">Please enter 2 names.</string>
+    <string name="name">Your Official Names</string>
+    <string name="nameHint">Please enter at least two names.</string>
     <string name="email">Email Address</string>
     <string name="emailHint">someone@example.com</string>
     <string name="phone">Phone Number</string>

@@ -13,14 +13,14 @@
         android:autofillHints="@string/nameHint"
         android:background="@drawable/edittext_design"
         android:hint="@string/name"
-        android:inputType="textPersonName"
+        android:inputType="textCapWords"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="20dp"
         android:paddingBottom="10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.061"
@@ -103,7 +103,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_signUpPassword1"
-        app:layout_constraintVertical_bias="0.052"
+        app:layout_constraintVertical_bias="0.036"
         app:layout_constraintWidth_percent=".8" />
 
     <Button
