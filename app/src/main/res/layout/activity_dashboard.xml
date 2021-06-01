@@ -12,13 +12,26 @@
         android:focusable="true"
         android:focusableInTouchMode="true">
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_drawerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:maxImageSize="30dp"
+            android:tint="@color/white"
+            app:backgroundTint="@color/white"
+            android:src="@drawable/ic_button"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_helloText"
+            app:layout_constraintEnd_toStartOf="@+id/tv_helloText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_helloText" />
+
         <ImageView
             android:id="@+id/img_profileIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/user"
-            app:layout_constraintWidth_max="32dp"
-            app:layout_constraintHeight_max="32dp"
+            app:layout_constraintWidth_max="30dp"
+            app:layout_constraintHeight_max="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
             app:layout_constraintVertical_bias="0"
@@ -34,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/notification"
-            app:layout_constraintWidth_max="32dp"
-            app:layout_constraintHeight_max="32dp"
+            app:layout_constraintWidth_max="30dp"
+            app:layout_constraintHeight_max="30dp"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintHorizontal_bias="1"
             android:layout_marginRight="10dp"
@@ -53,14 +66,14 @@
             android:layout_marginTop="30sp"
             android:text="Hello"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="24sp"
 
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_bias="0.19"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tv_userName"
@@ -71,9 +84,9 @@
             android:fontFamily="sans-serif-light"
             android:text="User Name"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_bias="0.2"
 
 
             app:layout_constraintEnd_toStartOf="@+id/img_notificationIcon"
@@ -85,23 +98,22 @@
             android:id="@+id/et_search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/search_bg"
+            android:elevation="2dp"
             android:hint="Search Courses"
+            android:maxLines="1"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:elevation="2dp"
-            android:maxLines="1"
-            android:layout_marginTop="15dp"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintWidth_percent=".7"
-            android:background="@drawable/search_bg"
-
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_helloText"
-            app:layout_constraintTop_toBottomOf="@+id/tv_helloText" />
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_helloText"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintWidth_percent=".7" />
 
         <ImageView
             android:id="@+id/img_search"
@@ -122,10 +134,11 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_topRv"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:elevation="0dp"
             app:layout_constraintVertical_bias="0"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -139,7 +152,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintVertical_bias="0"
 
             app:layout_constraintBottom_toBottomOf="parent"
