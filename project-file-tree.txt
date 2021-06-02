@@ -1,0 +1,161 @@
+Folder PATH listing
+C:.
+|   .gitignore <!-- contains entries to google-services.json and github.properties alongside the default gradle and idea project files -->
+|   build.gradle
+|   github.properties <!-- Please generate your own github.properties file to enable access to the liquid pager library -->
+|   gradle.properties
+|   gradlew
+|   gradlew.bat
+|   local.properties
+|   project-file-tree.txt
+|   README.md
+|   settings.gradle             
++---app
+|   |   .gitignore
+|   |   build.gradle
+|   |   google-services.json <!-- Please generate your own google-services.json file to enable access to firebase auth and database services -->
+|   |   proguard-rules.pro
+|   |
+|   \---src
+|       +---androidTest
+|       |   \---java
+|       |       \---com
+|       |           \---kennethmwenda <!-- Please rename this appropriately or import the project into your own workspace -->
+|       |               \---learnpopote
+|       |                       ExampleInstrumentedTest.kt
+|       |                       
+|       +---main
+|       |   |   AndroidManifest.xml
+|       |   |   
+|       |   +---java
+|       |   |   \---com
+|       |   |       \---kennethmwenda <!-- Please rename this appropriately or import the project into your own workspace -->
+|       |   |           \---learnpopote
+|       |   |               |   DashboardActivity.kt
+|       |   |               |   DrawerItemAdapter.kt
+|       |   |               |   DrawerItemModel.kt
+|       |   |               |   DynamicRecyclerViewAdapter.kt
+|       |   |               |   DynamicRecyclerViewModel.kt
+|       |   |               |   LoginActivity.kt
+|       |   |               |   LoginFragmentAdapter.kt
+|       |   |               |   LoginTabFragment.kt
+|       |   |               |   MainActivity.kt
+|       |   |               |   OnBoardingFragment1.kt
+|       |   |               |   OnBoardingFragment2.kt
+|       |   |               |   OnBoardingFragment3.kt
+|       |   |               |   SignUpTabFragment.kt
+|       |   |               |   SplashScreen.kt
+|       |   |               |   StaticRecyclerViewAdapter.kt
+|       |   |               |   StaticRecyclerViewModel.kt
+|       |   |               |   
+|       |   |               \---dynamicRVinterface
+|       |   |                       LoadMore.kt
+|       |   |                       
+|       |   \---res
+|       |       +---anim
+|       |       |       fadeinanimation.xml
+|       |       |       
+|       |       +---drawable
+|       |       |       app_bg.png
+|       |       |       app_bg_1.png
+|       |       |       button_design.xml
+|       |       |       circle.xml
+|       |       |       dynamicrecyclerviewmodel_bg.xml
+|       |       |       edittext_design.xml
+|       |       |       elearn1.png
+|       |       |       elearn2.png
+|       |       |       elearn3.png
+|       |       |       elipse.xml
+|       |       |       facebook_logo_icon.png
+|       |       |       google_logo_color.png
+|       |       |       google_plus_black.png
+|       |       |       gradcap.png
+|       |       |       ic_launcher_background.xml
+|       |       |       inner_bg.xml
+|       |       |       search_bg.xml
+|       |       |       staticrecyclerviewselected_bg.xml
+|       |       |       staticrecyclerview_bg.xml
+|       |       |       tab1.png
+|       |       |       tab2_white.png
+|       |       |       tab3.png
+|       |       |       
+|       |       +---drawable-v24
+|       |       |       csharpprogramming.png
+|       |       |       facebook.png
+|       |       |       google.png
+|       |       |       ic_launcher_foreground.xml
+|       |       |       notification.png
+|       |       |       search.png
+|       |       |       user.png
+|       |       |       
+|       |       +---font
+|       |       |       antique_book_cover.otf
+|       |       |       baloo_thambi.xml
+|       |       |       font_resource_file_1.xml
+|       |       |       panettone_demo.otf
+|       |       |       
+|       |       +---layout
+|       |       |       activity_dashboard.xml
+|       |       |       activity_login.xml
+|       |       |       activity_main.xml
+|       |       |       activity_splash_screen.xml
+|       |       |       drawer_item.xml
+|       |       |       drawer_menu.xml
+|       |       |       dynamic_recycler_view_item_layout.xml
+|       |       |       dynamic_recycler_view_progress_bar.xml
+|       |       |       fragment_on_boarding1.xml
+|       |       |       fragment_on_boarding2.xml
+|       |       |       fragment_on_boarding3.xml
+|       |       |       login_tab_fragment.xml
+|       |       |       signup_tab_fragment.xml
+|       |       |       static_recycler_view_items.xml
+|       |       |       
+|       |       +---mipmap-anydpi-v26
+|       |       |       ic_launcher.xml
+|       |       |       ic_launcher_round.xml
+|       |       |       
+|       |       +---mipmap-hdpi
+|       |       |       ic_launcher.png
+|       |       |       ic_launcher_round.png
+|       |       |       
+|       |       +---mipmap-mdpi
+|       |       |       ic_launcher.png
+|       |       |       ic_launcher_round.png
+|       |       |       
+|       |       +---mipmap-xhdpi
+|       |       |       ic_launcher.png
+|       |       |       ic_launcher_round.png
+|       |       |       
+|       |       +---mipmap-xxhdpi
+|       |       |       ic_launcher.png
+|       |       |       ic_launcher_round.png
+|       |       |       
+|       |       +---mipmap-xxxhdpi
+|       |       |       ic_launcher.png
+|       |       |       ic_launcher_round.png
+|       |       |       
+|       |       +---raw
+|       |       |       learn.json
+|       |       |       
+|       |       +---values
+|       |       |       colors.xml
+|       |       |       font_certs.xml
+|       |       |       preloaded_fonts.xml
+|       |       |       strings.xml
+|       |       |       themes.xml
+|       |       |       
+|       |       \---values-night
+|       |               themes.xml
+|       |               
+|       \---test
+|           \---java
+|               \---com
+|                   \---kennethmwenda <!-- Please rename this appropriately or import the project into your own workspace -->
+|                       \---learnpopote
+|                               ExampleUnitTest.kt
+|                               
+\---gradle
+    \---wrapper
+            gradle-wrapper.jar
+            gradle-wrapper.properties
+            
