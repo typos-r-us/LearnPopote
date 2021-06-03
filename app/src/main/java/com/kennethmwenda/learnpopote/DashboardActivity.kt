@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kennethmwenda.learnpopote.dynamicRVinterface.LoadMore
+import kotlinx.android.synthetic.main.activity_dashboard.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -14,6 +15,13 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+        // Retrieve details from registration activity
+        val userID = intent.getStringExtra("userId")
+        val emailId = intent.getStringExtra("emailId")
+        val phoneNo = intent.getStringExtra("phoneNo")
+        val userName = intent.getStringExtra("userName")
+
+        tv_userName.text = userName.toString()
 
         // Dummy data for static rv
         val itemsArrayList:ArrayList<StaticRecyclerViewModel> = ArrayList()

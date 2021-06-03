@@ -23,7 +23,7 @@
         android:layout_height="90dp"
         android:background="@drawable/dynamicrecyclerviewmodel_bg"
         android:elevation="3dp"
-        android:backgroundTint="#818181"
+        android:backgroundTint="#8798A0"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

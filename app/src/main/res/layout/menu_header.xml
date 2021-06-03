@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/colorPrimaryDark"
+    >
+    <ImageView
+        android:id="@+id/iv_drawerTopImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/gradcap"
+        />
+    <TextView
+        android:id="@+id/tv_drawerTopText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="18sp"
+        android:fontFamily="@font/baloo_thambi"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/tv_appTagLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copy"
+        android:textColor="@color/white"
+        android:fontFamily="@font/baloo_thambi"
+        android:textSize="10sp"
+        />
+
+</LinearLayout>

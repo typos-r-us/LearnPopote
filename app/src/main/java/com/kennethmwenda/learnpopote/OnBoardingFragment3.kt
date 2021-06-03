@@ -37,6 +37,7 @@ class OnBoardingFragment3 : Fragment(), View.OnClickListener {
         when (v?.id) {
             R.id.fab_toLogin -> {
                 val intent = Intent(activity,LoginActivity::class.java)
+                intent.flags - Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clear past activities
                 super.startActivity(intent)
             }
             else -> {
