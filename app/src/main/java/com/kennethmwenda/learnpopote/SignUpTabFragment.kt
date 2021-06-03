@@ -13,6 +13,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.signup_tab_fragment.*
 
 class SignUpTabFragment : Fragment() {
@@ -78,9 +79,12 @@ class SignUpTabFragment : Fragment() {
                                     intent.putExtra("emailId", userEmail)
                                     intent.putExtra("phoneNo", userPhone)
                                     intent.putExtra("userName", userName)
-
-
-                                    // TODO: Copy user details into users node
+                                    // Copy user details into users database node
+                                    val databaseReference = FirebaseDatabase.getInstance().getReference("usersData")
+                                    val dbUserId = databaseReference.push().key.toString()
+                                    val dbUser = UserInfoModel(dbUserId,userName,userPhone,userEmail)
+                                    databaseReference.child(firebaseUser.uid).setValue(dbUser)
+                                    // End Copy user details
                                     startActivity(intent)
                                     activity?.finish() // credit: https://stackoverflow.com/questions/7907900/finishing-current-activity-from-a-fragment
                                 } else{ // if the task failed
@@ -94,10 +98,7 @@ class SignUpTabFragment : Fragment() {
                         )
                 }
             }
-//            val intent = Intent(requireContext(),DashboardActivity::class.java)
-//            startActivity(intent)
         }
-
         return view
     }
 }
