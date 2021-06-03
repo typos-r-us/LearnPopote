@@ -43,7 +43,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_loginName"
-        app:layout_constraintVertical_bias="0.026"
+        app:layout_constraintVertical_bias="0.058"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -63,7 +63,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_signUpEmail"
-        app:layout_constraintVertical_bias="0.029"
+        app:layout_constraintVertical_bias="0.079"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -83,7 +83,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_signUpPhone"
-        app:layout_constraintVertical_bias="0.033"
+        app:layout_constraintVertical_bias="0.091"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -103,7 +103,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_signUpPassword1"
-        app:layout_constraintVertical_bias="0.036"
+        app:layout_constraintVertical_bias="0.122"
         app:layout_constraintWidth_percent=".8" />
 
     <Button
@@ -119,7 +119,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_signUpPassword2"
-        app:layout_constraintVertical_bias="0.105"
+        app:layout_constraintVertical_bias="0.207"
         app:layout_constraintWidth_percent=".8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

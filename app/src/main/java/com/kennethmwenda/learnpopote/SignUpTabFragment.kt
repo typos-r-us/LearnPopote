@@ -74,11 +74,13 @@ class SignUpTabFragment : Fragment() {
                                     // Send user to Dashboard
                                     val intent = Intent(requireContext(),DashboardActivity::class.java)
                                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
+                                    // Get only first name
+                                    val fName = userName.split("\\s".toRegex())[0] // credit: https://stackoverflow.com/questions/48379981/split-space-from-string-not-working-in-kotlin#48380101
                                     // send over the user details to the dashboard activity
                                     intent.putExtra("userId", firebaseUser.uid)
                                     intent.putExtra("emailId", userEmail)
                                     intent.putExtra("phoneNo", userPhone)
-                                    intent.putExtra("userName", userName)
+                                    intent.putExtra("userName", fName)
                                     // Copy user details into users database node
                                     val databaseReference = FirebaseDatabase.getInstance().getReference("usersData")
                                     val dbUserId = databaseReference.push().key.toString()

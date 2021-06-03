@@ -1,5 +1,6 @@
 package com.kennethmwenda.learnpopote
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.kennethmwenda.learnpopote.dynamicRVinterface.LoadMore
 import kotlinx.android.synthetic.main.activity_dashboard.*
@@ -70,7 +72,13 @@ class DashboardActivity : AppCompatActivity(){
                 Toast.makeText(this,"Clicked on Profile",Toast.LENGTH_LONG).show()
             }
             fabLogoutBtn.setOnClickListener(){
-                Toast.makeText(this,"Clicked on Logout",Toast.LENGTH_LONG).show()
+               // Sign out current user
+                FirebaseAuth.getInstance().signOut()
+                // go to login, clear all tasks to avoid back nav
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
+                startActivity(intent)
+                finish()
             }
         }
 

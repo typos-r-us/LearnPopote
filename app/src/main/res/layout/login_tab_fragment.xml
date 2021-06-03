@@ -30,22 +30,21 @@
         android:id="@+id/et_loginPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints="@string/passHint"
+        android:background="@drawable/edittext_design"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:autofillHints="@string/passHint"
         android:paddingStart="20dp"
-        android:paddingEnd="20dp"
         android:paddingTop="10dp"
+        android:paddingEnd="20dp"
         android:paddingBottom="10dp"
-        app:layout_constraintHorizontal_bias=".5"
-        app:layout_constraintVertical_bias=".1"
-        app:layout_constraintWidth_percent=".8"
-        android:background="@drawable/edittext_design"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_loginEmail"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_loginEmail"
+        app:layout_constraintVertical_bias="0.142"
+        app:layout_constraintWidth_percent=".8" />
 
     <Button
         android:id="@+id/btn_login"
@@ -68,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/forgotPass"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias=".8"
         app:layout_constraintVertical_bias="0"

@@ -11,8 +11,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val fbButton:FloatingActionButton = findViewById(R.id.fab_facebook)
-        val googleButton:FloatingActionButton = findViewById(R.id.fab_google)
 
 
         val tabLayout : TabLayout = findViewById(R.id.tl_TabLayout1)
@@ -26,14 +24,5 @@ class LoginActivity : AppCompatActivity() {
         viewPager.adapter = adapter
 
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-
-        // animate the widgets
-        fbButton.animate().translationY(300.0F)
-        fbButton.alpha = 0F
-        googleButton.animate().translationY(300.0F)
-        googleButton.alpha = 0F
-
-        fbButton.animate().translationY(0F).alpha(1F).setDuration(1000).setStartDelay(300).start()
-        googleButton.animate().translationY(0F).alpha(1F).setDuration(1000).setStartDelay(400).start()
     }
 }
