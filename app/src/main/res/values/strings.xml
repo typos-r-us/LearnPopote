@@ -32,8 +32,8 @@
     <string name="step1">Step 1</string>
     <string name="step2">Step 2</string>
     <string name="step3">Step 3</string>
-    <string name="selectCourse">Select from our wide range<br />of courses.</string>
-    <string name="accessCourse">Access courses on any device,<br />any time.</string>
+    <string name="selectCourse">Select from our wide range <br />of courses.</string>
+    <string name="accessCourse">Access courses on any device, <br />any time.</string>
     <string name="completeCourse">Completion certificates issued <br />to all successful students!</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
