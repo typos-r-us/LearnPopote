@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:elevation="4dp"
+        android:elevation="2dp"
         android:src="@drawable/csharpprogramming"
         app:layout_constraintBottom_toBottomOf="@+id/cl_dynamicRvCLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="90dp"
         android:background="@drawable/dynamicrecyclerviewmodel_bg"
-        android:elevation="3dp"
+        android:elevation="1dp"
         android:backgroundTint="#8798A0"
 
         app:layout_constraintBottom_toBottomOf="parent"

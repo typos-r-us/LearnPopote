@@ -72,7 +72,7 @@ class SignUpTabFragment : Fragment() {
                                     Toast.makeText(requireContext(),"$userName registered successfully.",Toast.LENGTH_LONG).show()
                                     // Send user to Dashboard
                                     val intent = Intent(requireContext(),DashboardActivity::class.java)
-                                    intent.flags - Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
+                                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
                                     // send over the user details to the dashboard activity
                                     intent.putExtra("userId", firebaseUser.uid)
                                     intent.putExtra("emailId", userEmail)

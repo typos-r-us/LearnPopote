@@ -13,18 +13,67 @@
         android:background="#8798A0"
         android:focusableInTouchMode="true">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_drawerButton"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:maxImageSize="30dp"
-            android:tint="@color/white"
-            app:backgroundTint="@color/white"
-            android:src="@drawable/ic_button"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_helloText"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tv_helloText"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_helloText" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="7dp"
+            app:layout_constraintVertical_bias="0.04"
+            app:layout_constraintHorizontal_bias="0.3">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_drawerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_button"
+                app:backgroundTint="@color/white"
+                app:maxImageSize="30dp" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_homeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_home"
+                app:backgroundTint="@color/colorPrimary"
+                app:maxImageSize="30dp"
+                android:layout_marginTop="70dp"
+                android:visibility="invisible"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_coursesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_course"
+                app:backgroundTint="@color/colorPrimary"
+                app:maxImageSize="30dp"
+                android:layout_marginTop="140dp"
+                android:visibility="invisible"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_profileButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_profile"
+                app:backgroundTint="@color/colorPrimary"
+                app:maxImageSize="30dp"
+                android:layout_marginTop="210dp"
+                android:visibility="invisible"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_logout"
+                app:backgroundTint="#E91E63"
+                app:maxImageSize="30dp"
+                android:layout_marginTop="280dp"
+                android:visibility="invisible"
+                />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
         <ImageView
             android:id="@+id/img_profileIcon"

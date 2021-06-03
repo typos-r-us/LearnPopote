@@ -23,6 +23,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/menu_header"
+        app:menu="@menu/nav_menu"
 
         />
 <!--    <Space-->

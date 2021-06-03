@@ -56,7 +56,7 @@ class LoginTabFragment : Fragment() {
                                 // Do stuff with the newly created user here. NB, once registered, the user is logged in automatically.
                                 //
                                 val intent = Intent(requireContext(),DashboardActivity::class.java)
-                                intent.flags - Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
+                                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
                                 // send over the user details to the dashboard activity
                                 // intent.putExtra("userName", userName)
                                 // intent.putExtra("userId", FirebaseAuth.getInstance().currentUser!!.uid)

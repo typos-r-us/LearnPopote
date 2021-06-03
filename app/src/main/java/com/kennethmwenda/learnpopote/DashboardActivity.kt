@@ -3,18 +3,77 @@ package com.kennethmwenda.learnpopote
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.database.DatabaseReference
 import com.kennethmwenda.learnpopote.dynamicRVinterface.LoadMore
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class DashboardActivity : AppCompatActivity() {
+
+class DashboardActivity : AppCompatActivity(){
+    // Boolean variable to track the state of drawerButton
+    var isOpen = false
+
+    // References to the database
+    lateinit var databaseReference:DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        val fabDrawerBtn:FloatingActionButton = findViewById(R.id.fab_drawerButton)
+        val fabHomeBtn: FloatingActionButton = findViewById(R.id.fab_homeButton)
+        val fabCourseBtn: FloatingActionButton = findViewById(R.id.fab_coursesButton)
+        val fabProfileBtn: FloatingActionButton = findViewById(R.id.fab_profileButton)
+        val fabLogoutBtn: FloatingActionButton = findViewById(R.id.fab_logoutButton)
+
+        val fabOpen = AnimationUtils.loadAnimation(this,R.anim.fab_open_animation)
+        val fabClose = AnimationUtils.loadAnimation(this,R.anim.fab_close_animation)
+        val fabRotateC = AnimationUtils.loadAnimation(this,R.anim.rotate_clockwise)
+        val fabRotateCC = AnimationUtils.loadAnimation(this,R.anim.rotate_counter_clockwise)
+
+        fabDrawerBtn.setOnClickListener(){
+            if(isOpen){
+                fabHomeBtn.startAnimation(fabClose)
+                fabCourseBtn.startAnimation(fabClose)
+                fabProfileBtn.startAnimation(fabClose)
+                fabLogoutBtn.startAnimation(fabClose)
+                fabDrawerBtn.startAnimation(fabRotateC)
+
+                isOpen = false
+            }else{
+                fabHomeBtn.startAnimation(fabOpen)
+                fabCourseBtn.startAnimation(fabOpen)
+                fabProfileBtn.startAnimation(fabOpen)
+                fabLogoutBtn.startAnimation(fabOpen)
+                fabDrawerBtn.startAnimation(fabRotateCC)
+
+                fabHomeBtn.isClickable
+                fabCourseBtn.isClickable
+                fabProfileBtn.isClickable
+                fabLogoutBtn.isClickable
+
+                isOpen=true
+            }
+            fabHomeBtn.setOnClickListener(){
+                Toast.makeText(this,"Clicked on Home",Toast.LENGTH_LONG).show()
+            }
+            fabCourseBtn.setOnClickListener(){
+                Toast.makeText(this,"Clicked on Courses",Toast.LENGTH_LONG).show()
+            }
+            fabProfileBtn.setOnClickListener(){
+                Toast.makeText(this,"Clicked on Profile",Toast.LENGTH_LONG).show()
+            }
+            fabLogoutBtn.setOnClickListener(){
+                Toast.makeText(this,"Clicked on Logout",Toast.LENGTH_LONG).show()
+            }
+        }
+
         // Retrieve details from registration activity
         val userID = intent.getStringExtra("userId")
         val emailId = intent.getStringExtra("emailId")
