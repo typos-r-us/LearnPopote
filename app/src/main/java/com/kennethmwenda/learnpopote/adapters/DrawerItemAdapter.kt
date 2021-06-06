@@ -1,4 +1,4 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.adapters
 //
 //import android.util.SparseArray
 //import android.view.View

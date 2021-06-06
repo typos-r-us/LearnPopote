@@ -1,4 +1,4 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.models
 //
 //import android.view.ViewGroup
 //import kotlin.properties.Delegates

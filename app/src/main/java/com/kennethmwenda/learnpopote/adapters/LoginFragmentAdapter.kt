@@ -1,9 +1,11 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.adapters
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.kennethmwenda.learnpopote.fragments.LoginTabFragment
+import com.kennethmwenda.learnpopote.fragments.SignUpTabFragment
 
 class LoginFragmentAdapter:FragmentPagerAdapter {
     val  context : Context

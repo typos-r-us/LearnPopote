@@ -45,6 +45,14 @@
         <item>Suggested Courses</item>
         <item>Logout</item>
     </string-array>
+    <string name="userMap">userMap</string>
+
+    <string name="introToHtml">
+        If you\'ve ever wondered how HTML works well you\'ve come to the right place. In this video today we\'ll be going through some HTML basics and you\'re gonna be making your very first website using HTML. We will be going over three things today. The first is what is HTML then we\'ll be going through some basic syntax and third you\'ll make a local website that you can load in your browser. One thing to keep in mind is that we\'re not gonna be going through any CSS or JavaScript today so this website that we\'re gonna be making is gonna be pretty basic. It\'s not gonna be all that pretty. Sounds good? Let\'s get started.\n
+Now what is HTML? HTML stands for hypertext markup language. It\'s a way of displaying information on webpages in your browser. One thing to remember is that HTML isn\'t itself a programming language. It\'s a markup language. Programming languages like PHP or Java use things like logic and conditions to control the content that you see. HTML doesn\'t do those things but it\'s still extremely important. You can actually create an HTML file on your computer and load it in your browser. It won\'t be on the internet so only your local computer can view it. To create your HTML file open up your computer\'s file program and windows that\'s File Explorer and on a Mac its Finder. In the program go to your desktop or wherever you want to put the file. You\'ll want to create a new file in that location. Make sure that the file name reads index.html on Windows. If for some reason you can\'t see the file extension just click on the View tab and make sure that the filename extensions checkbox is checked. When you have your file all set you\'ll want to open it in the browser. If it has a chrome or other browser icon on the left you can double click it to automatically open it. If not you can also right-click and select open with and then select your browser. Now in the browser everything will look blank which is fine because the file doesn\'t have anything in it now. In addition to opening the file on your browser you\'ll also want to open it in a code editor. I\'m using Visual Studio code and we\'re going to keep both the editor and the browser windows open next to each other so it\'s easy to make code changes and view them immediately. In addition to Visual Studio code there\'s a lot of other programs that you can use. You can use notepad plus plus sublime Atom or brackets. Most of those are free and I\'ve included links to each of these in case you want to download and install them.
+
+    </string>
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

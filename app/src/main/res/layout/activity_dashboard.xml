@@ -1,79 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
+    tools:context=".activities.DashboardActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:focusable="true"
         android:background="#8798A0"
-        android:focusableInTouchMode="true">
-
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_helloText"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:elevation="7dp"
-            app:layout_constraintVertical_bias="0.04"
-            app:layout_constraintHorizontal_bias="0.3">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab_drawerButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_button"
-                app:backgroundTint="@color/white"
-                app:maxImageSize="30dp" />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab_homeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_home"
-                app:backgroundTint="@color/colorPrimary"
-                app:maxImageSize="30dp"
-                android:layout_marginTop="70dp"
-                android:visibility="invisible"
-                />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab_coursesButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_course"
-                app:backgroundTint="@color/colorPrimary"
-                app:maxImageSize="30dp"
-                android:layout_marginTop="140dp"
-                android:visibility="invisible"
-                />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab_profileButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_profile"
-                app:backgroundTint="@color/colorPrimary"
-                app:maxImageSize="30dp"
-                android:layout_marginTop="210dp"
-                android:visibility="invisible"
-                />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab_logoutButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_logout"
-                app:backgroundTint="#E91E63"
-                app:maxImageSize="30dp"
-                android:layout_marginTop="280dp"
-                android:visibility="invisible"
-                />
-
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
+        android:focusableInTouchMode="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/cl_top">
 
         <ImageView
             android:id="@+id/img_profileIcon"
@@ -180,38 +120,66 @@
             app:layout_constraintTop_toTopOf="@+id/et_search"
             app:layout_constraintBottom_toBottomOf="@+id/et_search"
             />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_topRv"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-
-            android:elevation="0dp"
-            app:layout_constraintVertical_bias="0"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_search" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_bottomRv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintVertical_bias="0"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_topRv" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottomChip"
+        android:layout_below="@id/cl_top"
+        >
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:videoId="cnt_rMA1pe0"
+            app:autoPlay="false"
+            app:showYouTubeButton="true"
+            app:handleNetworkEvents="true"
+            app:enableLiveVideoUi="false"
+            app:showVideoCurrentTime="true"
+            app:showVideoDuration="true"
+            app:showSeekBar="true"
+            app:showFullScreenButton="true"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Introduction to HTML"
+            android:textColor="#ffff"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
 
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-</ScrollView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/introToHtml"
+                />
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Chemistry: Please click here"
+            android:textColor="#ffff"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottomChip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+
+        app:cnb_menuResource="@menu/nav_menu"
+        app:cnb_unselectedColor="@color/purple_500" />
+</RelativeLayout>

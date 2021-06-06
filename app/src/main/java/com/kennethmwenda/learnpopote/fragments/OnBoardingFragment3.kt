@@ -1,4 +1,4 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,9 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.fragment_on_boarding3.*
-import java.util.*
-import kotlin.concurrent.schedule
+import com.kennethmwenda.learnpopote.R
+import com.kennethmwenda.learnpopote.activities.LoginActivity
 
 class OnBoardingFragment3 : Fragment(), View.OnClickListener {
 
@@ -36,7 +35,7 @@ class OnBoardingFragment3 : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.fab_toLogin -> {
-                val intent = Intent(activity,LoginActivity::class.java)
+                val intent = Intent(activity, LoginActivity::class.java)
                 intent.flags - Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clear past activities
                 super.startActivity(intent)
             }

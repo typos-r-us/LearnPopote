@@ -1,10 +1,11 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayout
+import com.kennethmwenda.learnpopote.adapters.LoginFragmentAdapter
+import com.kennethmwenda.learnpopote.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

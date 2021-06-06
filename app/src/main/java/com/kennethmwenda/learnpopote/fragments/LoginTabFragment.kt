@@ -1,6 +1,8 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.fragments
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -17,8 +19,10 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.kennethmwenda.learnpopote.R
+import com.kennethmwenda.learnpopote.models.UserInfoModel
+import com.kennethmwenda.learnpopote.activities.DashboardActivity
 import kotlinx.android.synthetic.main.login_tab_fragment.*
-import kotlinx.android.synthetic.main.signup_tab_fragment.*
 
 class LoginTabFragment : Fragment() {
 
@@ -28,7 +32,6 @@ class LoginTabFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view : View = inflater.inflate(R.layout.login_tab_fragment, container, false)
-
         val loginButton = view.findViewById<Button>(R.id.btn_login)
 
         loginButton.setOnClickListener {
@@ -102,7 +105,7 @@ class LoginTabFragment : Fragment() {
                                 // add the username to the toast
                                 Toast.makeText(requireContext(),"Logged in successfully.",Toast.LENGTH_LONG).show()
                                 // got to dashboard and take the user info with you.
-                                val intent = Intent(requireContext(),DashboardActivity::class.java)
+                                val intent = Intent(requireContext(), DashboardActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
                                 // send over the user details to the dashboard activity
                                 intent.putExtra("userName", firebaseUser.displayName.toString())

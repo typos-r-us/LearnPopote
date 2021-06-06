@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/csBtnBack"
+        android:title="Previous"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_previous"
+        />
+    <item
+        android:id="@+id/csBtnHome"
+        android:title="Home"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_home"
+        />
+    <item
+        android:id="@+id/csBtnNext"
+        android:title="Next"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_next"
+        />
+</menu>

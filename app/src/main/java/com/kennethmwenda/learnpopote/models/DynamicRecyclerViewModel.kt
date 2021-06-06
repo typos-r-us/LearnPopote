@@ -1,4 +1,4 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.models
 
 class DynamicRecyclerViewModel(val name: String, val image: Int) {
 

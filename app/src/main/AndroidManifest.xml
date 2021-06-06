@@ -10,17 +10,17 @@
         android:roundIcon="@drawable/gradcap"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnPopote">
-        <activity android:name=".DashboardActivity">
+        <activity android:name=".activities.DashboardActivity">
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".activities.MainActivity" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -1,10 +1,11 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.kennethmwenda.learnpopote.R
 
 class OnBoardingFragment2 : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.adapters
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -9,7 +9,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
-import com.kennethmwenda.learnpopote.StaticRecyclerViewAdapter.StaticRecycleViewHolder
+import com.kennethmwenda.learnpopote.models.DynamicRecyclerViewModel
+import com.kennethmwenda.learnpopote.R
+import com.kennethmwenda.learnpopote.models.StaticRecyclerViewModel
+import com.kennethmwenda.learnpopote.adapters.StaticRecyclerViewAdapter.StaticRecycleViewHolder
 import com.kennethmwenda.learnpopote.dynamicRVinterface.UpdateRecyclerView
 
 class StaticRecyclerViewAdapter : RecyclerView.Adapter<StaticRecycleViewHolder> {
@@ -46,7 +49,7 @@ class StaticRecyclerViewAdapter : RecyclerView.Adapter<StaticRecycleViewHolder> 
     override fun onBindViewHolder(holder: StaticRecycleViewHolder, position: Int) {
       //  TODO("Not yet implemented")
         // val currentItem:StaticRecyclerViewModel = itemCount.get(position)
-        val currentItem:StaticRecyclerViewModel = listItems[position] // listItems.get(position)
+        val currentItem: StaticRecyclerViewModel = listItems[position] // listItems.get(position)
         holder.imageView.setImageDrawable(currentItem.getImage().toDrawable())
         holder.textView.text = currentItem.getText()
 
@@ -71,12 +74,36 @@ class StaticRecyclerViewAdapter : RecyclerView.Adapter<StaticRecycleViewHolder> 
 
                 if(position==0){
                     val dynamicRVItemsList:ArrayList<DynamicRecyclerViewModel> = ArrayList()
-                    dynamicRVItemsList.add(DynamicRecyclerViewModel("C-Sharp Programming, Intro",R.drawable.csharpprogramming))
-                    dynamicRVItemsList.add(DynamicRecyclerViewModel("C-Sharp Programming, Strings",R.drawable.csharpprogramming))
-                    dynamicRVItemsList.add(DynamicRecyclerViewModel("C-Sharp Programming, Functions",R.drawable.csharpprogramming))
-                    dynamicRVItemsList.add(DynamicRecyclerViewModel("C-Sharp Programming, Graphics",R.drawable.csharpprogramming))
-                    dynamicRVItemsList.add(DynamicRecyclerViewModel("C-Sharp Programming, Networking",R.drawable.csharpprogramming))
-                    dynamicRVItemsList.add(DynamicRecyclerViewModel("C-Sharp Programming, Project",R.drawable.gradcap))
+                    dynamicRVItemsList.add(
+                        DynamicRecyclerViewModel("C-Sharp Programming, Intro",
+                            R.drawable.csharpprogramming
+                        )
+                    )
+                    dynamicRVItemsList.add(
+                        DynamicRecyclerViewModel("C-Sharp Programming, Strings",
+                            R.drawable.csharpprogramming
+                        )
+                    )
+                    dynamicRVItemsList.add(
+                        DynamicRecyclerViewModel("C-Sharp Programming, Functions",
+                            R.drawable.csharpprogramming
+                        )
+                    )
+                    dynamicRVItemsList.add(
+                        DynamicRecyclerViewModel("C-Sharp Programming, Graphics",
+                            R.drawable.csharpprogramming
+                        )
+                    )
+                    dynamicRVItemsList.add(
+                        DynamicRecyclerViewModel("C-Sharp Programming, Networking",
+                            R.drawable.csharpprogramming
+                        )
+                    )
+                    dynamicRVItemsList.add(
+                        DynamicRecyclerViewModel("C-Sharp Programming, Project",
+                            R.drawable.gradcap
+                        )
+                    )
 
                     updateRecyclerView.callback(position,dynamicRVItemsList)
                 }

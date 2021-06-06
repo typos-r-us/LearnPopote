@@ -1,4 +1,4 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.models
 
 class StaticRecyclerViewModel constructor(private val img:Int, private val txt:String) {
     fun getImage(): Int{

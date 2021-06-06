@@ -1,4 +1,4 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.kennethmwenda.learnpopote.models.DynamicRecyclerViewModel
+import com.kennethmwenda.learnpopote.R
 
 class DynamicRecyclerViewAdapter : RecyclerView.Adapter<DynamicRecyclerViewAdapter.DynamicRecycleViewHolder>{
     var dynamicRVModelsList: ArrayList<DynamicRecyclerViewModel> // Check this for errors
@@ -32,18 +34,18 @@ class DynamicRecyclerViewAdapter : RecyclerView.Adapter<DynamicRecyclerViewAdapt
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): DynamicRecyclerViewAdapter.DynamicRecycleViewHolder {
+    ): DynamicRecycleViewHolder {
         // inflate the layout
         val view:View = LayoutInflater.from(parent.context).inflate(R.layout.dynamic_recycler_view_item_layout,parent,false)
-        val dynamicRvHolder:DynamicRecycleViewHolder = DynamicRecycleViewHolder(view)
+        val dynamicRvHolder: DynamicRecycleViewHolder = DynamicRecycleViewHolder(view)
         return dynamicRvHolder
     }
 
     override fun onBindViewHolder(
-        holder: DynamicRecyclerViewAdapter.DynamicRecycleViewHolder,
+        holder: DynamicRecycleViewHolder,
         position: Int
     ) {
-        val currentItem:DynamicRecyclerViewModel = dynamicRVModelsList.get(position)
+        val currentItem: DynamicRecyclerViewModel = dynamicRVModelsList.get(position)
         holder.imageView.setImageResource(currentItem.getImage())
         holder.textView.text = currentItem.getName()
     }

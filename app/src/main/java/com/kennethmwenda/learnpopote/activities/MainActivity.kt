@@ -1,7 +1,8 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kennethmwenda.learnpopote.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

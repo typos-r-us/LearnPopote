@@ -9,7 +9,7 @@
     android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    tools:context=".DashboardActivity">
+    tools:context=".activities.DashboardActivity">
 
     <include
         android:layout_width="match_parent"

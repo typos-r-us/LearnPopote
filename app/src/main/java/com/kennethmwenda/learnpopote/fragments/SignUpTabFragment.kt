@@ -1,7 +1,9 @@
-package com.kennethmwenda.learnpopote
+package com.kennethmwenda.learnpopote.fragments
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,7 +16,11 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.kennethmwenda.learnpopote.R
+import com.kennethmwenda.learnpopote.models.UserInfoModel
+import com.kennethmwenda.learnpopote.activities.DashboardActivity
 import kotlinx.android.synthetic.main.signup_tab_fragment.*
+
 
 class SignUpTabFragment : Fragment() {
 
@@ -71,11 +77,22 @@ class SignUpTabFragment : Fragment() {
                                     //
                                     // Do stuff with the newly created user here. NB, once registered, the user is logged in automatically.
                                     Toast.makeText(requireContext(),"$userName registered successfully.",Toast.LENGTH_LONG).show()
-                                    // Send user to Dashboard
-                                    val intent = Intent(requireContext(),DashboardActivity::class.java)
-                                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
                                     // Get only first name
                                     val fName = userName.split("\\s".toRegex())[0] // credit: https://stackoverflow.com/questions/48379981/split-space-from-string-not-working-in-kotlin#48380101
+                                    // Save user info to memory??
+
+                                    val sharedPref = activity?.getSharedPreferences("userMap",Context.MODE_PRIVATE) //val sharedPref = PreferenceManager.getDefaultSharedPreferences(requireContext())
+                                    val editor = sharedPref?.edit()
+                                    editor?.putString("userID", firebaseUser.uid)
+                                    editor?.putString("emailId", userEmail)
+                                    editor?.putString("phoneNo", userPhone)
+                                    editor?.putString("userName", fName)
+                                    editor?.commit() // use apply to allow the write to proceed in bg. Commit will write immediately
+                                    // End save user info to memory
+
+                                    // Send user to Dashboard
+                                    val intent = Intent(requireContext(), DashboardActivity::class.java)
+                                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
                                     // send over the user details to the dashboard activity
                                     intent.putExtra("userId", firebaseUser.uid)
                                     intent.putExtra("emailId", userEmail)
