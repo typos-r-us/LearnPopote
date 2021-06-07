@@ -17,7 +17,8 @@ import kotlinx.android.synthetic.main.activity_java_script_course.*
 
 class JavaScriptCourseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Try to hide system navbar by setting fullscreen activity. Hides only status bar, not nav
+        // Try to hide system navbar by setting fullscreen activity.
+        hideSystemUI()
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         // End hide system navbar by setting fullscreen activity
@@ -91,5 +92,16 @@ class JavaScriptCourseActivity : AppCompatActivity() {
                 }
             })
         // End custom youtube class and initialization
+    }
+    fun hideSystemUI(){
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_FULLSCREEN
+                        //or View.SYSTEM_UI_FLAG_LOW_PROFILE
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE
+                )
     }
 }
