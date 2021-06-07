@@ -37,6 +37,7 @@
     <string name="completeCourse">Completion certificates issued <br />to all successful students!</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="apiKey">AIzaSyAz7727GL5v1bLFUR-ZxyelWZ19TVx4SDg</string>
 
     <string-array name="menuItems">
         <item>My Profile</item>
@@ -48,9 +49,58 @@
     <string name="userMap">userMap</string>
 
     <string name="introToHtml">
-        If you\'ve ever wondered how HTML works well you\'ve come to the right place. In this video today we\'ll be going through some HTML basics and you\'re gonna be making your very first website using HTML. We will be going over three things today. The first is what is HTML then we\'ll be going through some basic syntax and third you\'ll make a local website that you can load in your browser. One thing to keep in mind is that we\'re not gonna be going through any CSS or JavaScript today so this website that we\'re gonna be making is gonna be pretty basic. It\'s not gonna be all that pretty. Sounds good? Let\'s get started.\n
-Now what is HTML? HTML stands for hypertext markup language. It\'s a way of displaying information on webpages in your browser. One thing to remember is that HTML isn\'t itself a programming language. It\'s a markup language. Programming languages like PHP or Java use things like logic and conditions to control the content that you see. HTML doesn\'t do those things but it\'s still extremely important. You can actually create an HTML file on your computer and load it in your browser. It won\'t be on the internet so only your local computer can view it. To create your HTML file open up your computer\'s file program and windows that\'s File Explorer and on a Mac its Finder. In the program go to your desktop or wherever you want to put the file. You\'ll want to create a new file in that location. Make sure that the file name reads index.html on Windows. If for some reason you can\'t see the file extension just click on the View tab and make sure that the filename extensions checkbox is checked. When you have your file all set you\'ll want to open it in the browser. If it has a chrome or other browser icon on the left you can double click it to automatically open it. If not you can also right-click and select open with and then select your browser. Now in the browser everything will look blank which is fine because the file doesn\'t have anything in it now. In addition to opening the file on your browser you\'ll also want to open it in a code editor. I\'m using Visual Studio code and we\'re going to keep both the editor and the browser windows open next to each other so it\'s easy to make code changes and view them immediately. In addition to Visual Studio code there\'s a lot of other programs that you can use. You can use notepad plus plus sublime Atom or brackets. Most of those are free and I\'ve included links to each of these in case you want to download and install them.
-
+        HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. A markup language is used to define the text document within tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most markup languages (e.g. HTML) are human-readable. The language uses tags to define what manipulation has to be done on the text.
+\n
+HTML is a markup language used by the browser to manipulate text, images, and other content, in order to display it in the required format. HTML was created by Tim Berners-Lee in 1991. The first-ever version of HTML was HTML 1.0, but the first standard version was HTML 2.0, published in 1999.
+\n
+Elements and Tags: HTML uses predefined tags and elements which tell the browser how to properly display the content. Remember to include closing tags. If omitted, the browser applies the effect of the opening tag until the end of the page.
+\n
+HTML page structure: The basic structure of an HTML page is laid out below. It contains the essential building-block elements (i.e. doctype declaration, HTML, head, title, and body elements) upon which all web pages are created.
+\n
+&lt;DOCTYPE! html&gt;: This is the document type declaration (not technically a tag). It declares a document as being an HTML document. The doctype declaration is not case-sensitive.\n
+&lt;html&gt;: This is called the HTML root element. All other elements are contained within it.\n
+&lt;head&gt;: The head tag contains the “behind the scenes” elements for a webpage. Elements within the head aren’t visible on the front-end of a webpage. HTML elements used inside the &lt;head&gt; element include:
+\n
+    &lt;style&gt;\n
+    &lt;title&gt;\n
+    &lt;base&gt;\n
+    &lt;noscript&gt;\n
+    &lt;script&gt;\n
+    &lt;meta&gt;\n
+    &lt;link&gt;
+\n
+&lt;body&gt;: the body tag is used to enclose all the visible content of a webpage. In other words, the body content is what the browser will show on the front-end.
+\n
+An HTML document can be created using any text editor. Save the text file using .html or .htm. Once saved as an HTML document, the file can be opened as a webpage in the browser.
+\n
+NOTE: Basic/built-in text editors are Notepad (Windows) and TextEdit (Macs). Basic text editors are entirely sufficient for when you’re just getting started. As you progress, there are many feature-rich text editors available which allow for greater function and flexibility.
+\n
+Features of HTML:
+\n
+    It is easy to learn and easy to use. \n
+    It is platform-independent.\n
+    Images, videos, and audio can be added to a web page.\n
+    Hypertext can be added to text.\n
+    It is a markup language.
+\n
+Why learn HTML?
+\n
+    It is a simple markup language. Its implementation is easy.\n
+    It is used to create a website.\n
+    Helps in developing fundamentals about web programming.\n
+    Boost professional career.
+\n
+Advantages:
+\n
+    HTML is used to build websites.\n
+    It is supported by all browsers.\n
+    It can be integrated with other languages like CSS, JavaScript, etc.
+\n
+Disadvantages:
+\n
+    HTML can only create static webpages. For dynamic webpages, other languages have to be used.\n
+    A large amount of code has to be written to create a simple web page.\n
+    The security feature is not good.\n
     </string>
 
 

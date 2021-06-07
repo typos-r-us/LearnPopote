@@ -74,10 +74,6 @@
         android:layout_above="@+id/bottomChip"
         android:layout_below="@id/cl_top"
         >
-        <FrameLayout
-            android:id="@+id/yt_player1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"/>
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:id="@+id/yt_player"
             android:layout_width="match_parent"
@@ -93,6 +89,7 @@
             app:showFullScreenButton="true"
             />
         <TextView
+            android:id="@+id/tv_topicHeader"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:text="Introduction to HTML"
@@ -107,6 +104,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/tv_topicNotes"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="@string/introToHtml"
