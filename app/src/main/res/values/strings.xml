@@ -48,6 +48,82 @@
     </string-array>
     <string name="userMap">userMap</string>
 
+    <string name="htmlCourseOutline">
+        <b><u>The Fastest, Easiest Way to Learn HTML Fundamentals!</u></b> \n
+Professor Teaches courses use real-world settings and accurate simulations to help you apply your new knowledge directly to daily tasks and the knowledge you gain becomes an asset for life.\n
+\n
+<b>Chapter #1: What is HTML?</b>\n
+&#8226; What is a Web Browser?\n
+&#8226; What are Versions of HTML?\n
+&#8226; What can You Do with HTML?\n
+&#8226; HTML Development Environments\n
+&#8226; Using a WYSIWYG Editor\n
+&#8226; Using an HTML Editor\n
+&#8226; Writing Code with a Text Editor\n
+&#8226; Publishing Documents\n
+\n
+        <b>Chapter # 2: Review of HTML Elements</b>\n
+&#8226; Rules of Syntax\n
+&#8226; Making your Code Readable\n
+&#8226; Making your Code XHTML Compliant\n
+&#8226; Building a Document\n
+&#8226; Using Colors\n
+&#8226; Adding Color to your Page\n
+&#8226; Using Headings\n
+&#8226; Using Paragraphs\n
+&#8226; Using Blockquotes\n
+&#8226; Using Entities\n
+&#8226; Aligning Block-Level Elements\n
+\n
+        <b>Chapter # 3: Inserting Spaces and Line Breaks</b>\n
+&#8226; Displaying Preformatted Text\n
+&#8226; Formatting with Inline Elements\n
+&#8226; Controlling Fonts\n
+&#8226; Introducing List Elements\n
+&#8226; Creating Unordered Lists\n
+&#8226; Creating Ordered Lists\n
+&#8226; Creating Definition Lists\n
+&#8226; Nesting Lists\n
+&#8226; Indenting Text with the &lt;ul&gt; Tag\n
+\n
+        <b>Chapter #4: What is an HTML Table?</b>\n
+&#8226; Building a Table\n
+&#8226; Using the Border Attribute\n
+&#8226; Cell Padding and Cell Spacing\n
+&#8226; Controlling Table and Cell Width\n
+&#8226; Aligning a Table on the Page\n
+&#8226; Aligning Tables and Text\n
+&#8226; Aligning Table Data\n
+&#8226; Spanning Columns and Rows\n
+&#8226; Nesting Tables\n
+&#8226; Adding Color to Tables\n
+&#8226; Using Tables as a Design Tool\n
+\n
+        <b>Chapter #5: Creating a Hyperlink</b>\n
+&#8226; Understanding and Using URLs\n
+&#8226; Linking to a Web Document\n
+&#8226; Linking to a Local Document\n
+&#8226; Linking to Anchors\n
+&#8226; Opening a New Browser Window\n
+&#8226; Creating a Frameset\n
+&#8226; Adding the Frame Elements\n
+&#8226; Creating the Frames\n
+&#8226; Using the Noframes Element\n
+&#8226; Using Inline Frames\n
+\n
+        <b>Chapter #6: Graphic File Formats</b>\n
+&#8226; Optimizing Image and File Size\n
+&#8226; Inserting Inline Images\n
+&#8226; Aligning and Formatting Images\n
+&#8226; Using Images to Anchor Links\n
+&#8226; Creating a Look-and-Feel\n
+&#8226; Sizing and Scaling Images\n
+&#8226; Using Transparent Images\n
+&#8226; Making an Image Fade In\n
+&#8226; Finding and Creating Graphics\n
+&#8226; Using GIF Animation \n\n
+    </string>
+
     <string name="introToHtml">
         HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. A markup language is used to define the text document within tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most markup languages (e.g. HTML) are human-readable. The language uses tags to define what manipulation has to be done on the text.
 \n
@@ -102,8 +178,124 @@ Disadvantages:
     A large amount of code has to be written to create a simple web page.\n
     The security feature is not good.\n
     </string>
+    <string name="htmlElementsText">
+        <b><u>Introduction to HTML5 Elements</u></b>
+\n\n
+We are mostly aware of web sites. A web site is simply a collection of web pages. For creating any web page we require. An HTML is the element that is responsible for making any web page. HTML stands for HyperText Markup Language. It is a basic markup language used to make any web pages that further comprise to form websites. HTML had evolved so much from the initial stage when it was formed\n
+\n
+W3C and WHATWG initially developed HTML. It was initially developed in 1993. W3C mainly checks for standards of Html and other stuff. HTML has evolved a lot from the initial version of 1.0 to the version of 5 HTML5 has lots of new HTML tags.\n
+<b>HTML tags, their Uses and Examples</b>\n
+\n
+Below are some tags of HTML with their uses, and examples. \n\n
+<b>New elements in HTML5</b>\n
 
+1)&lt;datalist&gt; – It is a new form element in HTML5 . It helps to implement a feature of autocomplete where an input box appears where the user can insert text to see elements in the list.\n
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+&lt;output&gt; – This tag represents the output of any calculation which is computed on an HTML file.\n
+
+2) &lt;input type=” text”&gt; – This element is used to receive input from the user. The text entered by the user is generally text form.\n
+
+3) &lt;input type=” password”&gt; – This element is used to receive a password from the user.\n
+
+4) &lt;input type=” submit”&gt; – This tag renders a submit button. This button is used to submit the form.\n
+
+5) &lt;input type=” radio”&gt; – This element helps to receive one input from the user from the available multiple items. User can select any of the items available in the list.\n
+
+6) &lt;input type=” checkbox”&gt; – This element helps to receive multiple inputs from the user from the available multiple items. User can select any number of the items available in the list.\n
+
+7) HTMLput type=” number”&gt; – This element helps to numeric value from the user. User can insert an only numeric value into the field.\n
+
+8) &lt;input type=” email”&gt; – This element helps to validate whether the value inserted by the user is a valid email. It shows an error on submit if the email is not valid.\n
+\n
+Apart from this, HTML5 has lots of new elements added to it. Some of them are –\n
+
+&#8226; range\n
+&#8226; URL\n
+&#8226; tel\n
+&#8226; audio\n
+&#8226; embed\n
+\n
+Apart from HTML elements. It has also added new semantic elements. Some of the important semantic elements are-\n
+
+&#8226; &lt;article&gt;\n
+&#8226; &lt;figcaption&gt;\n
+&#8226; &lt;footer&gt;\n
+&#8226; &lt;section&gt;\n
+&#8226; &lt;mark&gt;\n
+&#8226; &lt;figure&gt;\n
+&#8226; &lt;aside&gt;\n
+&#8226; &lt;main&gt;\n
+&#8226; &lt;nav&gt;\n
+&#8226; &lt;details&gt;\n
+&#8226; &lt;header&gt;\n
+    </string>
+
+    <string name="javaScriptCourseOutline">
+        <b><u>Javascript</u></b> \n
+\n
+Javascript is a client-side scripting language. Brendan  Eich created JavaScript in September 1995. Javascript is created to make web pages alive. Javascript is most commonly used as a part of the web page. It is a programming language that adds interactivity to your website.  In other words javascript help to make web pages interactive. It helps to add many animations, Dropdown Menus, and also help to make our website responsive.\n
+\n
+JavaScript enables interactivity on websites and gives them a sense of state. Javascript also helps to make dynamic pages. It also used to change the Html content and Html attributes value.\n\n
+<b>Why javaScript Important?</b>\n
+
+The question is can we build our websites without javascript? And the answer is yes you don\'t need JavaScript to build a website. Javascript help to make web pages interactive. It helps to add different animations, many mouse events, create dropdowns, and help to make the website responsive..HTML is the content on the page the words, buttons, images. While CSS determines things like color, font size, positions of elements,  align-items, and many others. A website is HTML, CSS, and not JavaScript. So where does JavaScript comes in, and why is it so important to develop websites?  JavaScript adds interactivity to websites and gives them a sense of state. Javascript allows making dynamic pages.\n\n
+How to write Javascript:\n
+
+There are two different ways to add javascript code to Html web page.\n
+
+&#8226; Internal Javascript\n
+&#8226; External Javascript\n\n
+
+<b>Internal javascript</b>\n
+
+In this way you can write javascript code inside &lt;script&gt;&lt;/script&gt; tag. Javascript code is also called script. You can add more than one scripts to a web page.\n
+
+You can place javacript code in both &lt;head&gt; section and also in &lt;body&gt; section. But &lt;body&gt; section is most preferred way to place script but you can also add script in the &lt;/head&gt; section of  html page.\n\n
+
+<b>External javascript</b>\n
+
+External javascript is the most preferred way to write javascript code. To add external javascript create a separate file with the extension of .js and after that to use this file on an HTML page write the complete path of the javascript file in the “src” attribute of  &lt;script&gt; tag.\n
+
+Create separate file with “.js” extension :\n
+
+After that include this file to html page:\n
+
+<b>Javascript course outline</b>\n
+
+Here are the  important things you should learn about javascript as a beginner to start web development:\n
+
+&#8226;  How to write Javascript code\n
+
+&#8226;  -&gt; Javascript Variable\n
+
+&#8226;  -&gt; Built-in methods in Javascript\n
+
+&#8226;  -&gt; String Methods\n
+
+&#8226;  -&gt; Javascript Math methods\n
+
+&#8226;  -&gt; Date and Time\n
+
+&#8226;  -&gt; Javascript Operators\n
+
+&#8226;  -&gt; Conditional statements\n
+
+&#8226;  -&gt; Javascript Loops\n
+
+&#8226;  -&gt; Javascript Arrays\n
+
+&#8226; Functions\n
+
+&#8226; Javascript  Objects\n
+
+&#8226;  Dom Manipulation\n
+
+&#8226;  Javascript  Events\n
+\n
+This is all about from this JavaScript tutorial we discuss complete introduction to javaScript. We also discuss the complete course outline of JavaScript. Learn more about JavaScript.\n
+    </string>
+    <string name="title_activity_java_script_course">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>

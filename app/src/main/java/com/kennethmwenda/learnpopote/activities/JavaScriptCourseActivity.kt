@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.*
-import com.google.android.youtube.player.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.Toast
+import com.google.android.youtube.player.YouTubeInitializationResult
+import com.google.android.youtube.player.YouTubePlayer
+import com.google.android.youtube.player.YoutubePlayerLP
 import com.kennethmwenda.learnpopote.R
-import kotlinx.android.synthetic.main.activity_html_course.*
+import kotlinx.android.synthetic.main.activity_java_script_course.*
 
-class HtmlCourseActivity : AppCompatActivity() {
+class JavaScriptCourseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // Try to hide system navbar by setting fullscreen activity. Hides only status bar, not nav
         requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -18,13 +23,13 @@ class HtmlCourseActivity : AppCompatActivity() {
         // End hide system navbar by setting fullscreen activity
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_html_course)
+        setContentView(R.layout.activity_java_script_course)
         val spinner: Spinner = findViewById(R.id.sp_courseTopicName)
         //Create An Array containing topic names
         val topics:MutableList<String> = ArrayList()
         topics.add("") // Blank to allow loading of Intro screen
-        topics.add("Introduction to HTML") //https://www.youtube.com/watch?v=iHyAxOb0Au4
-        topics.add("Review of HTML Elements") //https://www.youtube.com/watch?v=Ytcp0zyCUS8
+        topics.add("Introduction to JavaScript") //https://www.youtube.com/watch?v=iHyAxOb0Au4
+        topics.add("Review of JavaScript Elements") //https://www.youtube.com/watch?v=Ytcp0zyCUS8
         topics.add("Inserting Spaces and Line Breaks") //https://www.youtube.com/watch?v=s-hdQE61lQg
         topics.add("What is an HTML Table?") //https://www.youtube.com/watch?v=u4vDA0Uh0Lw
         topics.add("Creating a Hyperlink") //https://www.youtube.com/watch?v=q_9u0ipiAro
@@ -35,25 +40,21 @@ class HtmlCourseActivity : AppCompatActivity() {
         spinner.adapter = adapter
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
-            //To change body of created functions use File | Settings | File Templates.
+                //To change body of created functions use File | Settings | File Templates.
             }
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                // val itemSelected:String = topics[position]
-                // val print:String = "$itemSelected selected."
-                // Toast.makeText(this@HtmlCourseActivity,print,Toast.LENGTH_SHORT).show()
-
-                // Set topic in page header
+                // Set topic header
                 tv_topicHeader.text=topics[position]
                 // Change the video and notes:
                 when (position){
                     0->{/* do nothing*/}
                     1->{
                         ytCreator("iHyAxOb0Au4")
-                        tv_topicNotes.text= getString(R.string.introToHtml)
+                        tv_topicNotes.text= getString(R.string.javaScriptCourseOutline)
                     }
                     2->{
                         ytCreator("Ytcp0zyCUS8")
-                        tv_topicNotes.text=getString(R.string.htmlElementsText)
+                        tv_topicNotes.text=getString(R.string.javaScriptCourseOutline)
                     }
                     3->{ytCreator("s-hdQE61lQg")}
                     4->{ytCreator("u4vDA0Uh0Lw")}
@@ -64,6 +65,7 @@ class HtmlCourseActivity : AppCompatActivity() {
             }
         }
     }
+    // custom function to load the selected youtube video in ytPlayer
     fun ytCreator(videoId:String){
         // custom youtube class and initialization
         val ytPlayerSupportFragment = YoutubePlayerLP.newInstance()
@@ -85,7 +87,7 @@ class HtmlCourseActivity : AppCompatActivity() {
                     p0: YouTubePlayer.Provider?,
                     p1: YouTubeInitializationResult?
                 ) {
-                    Toast.makeText(this@HtmlCourseActivity,"ERROR INITIATING YOUTUBE",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@JavaScriptCourseActivity,"ERROR INITIATING YOUTUBE", Toast.LENGTH_LONG).show()
                 }
             })
         // End custom youtube class and initialization

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.HtmlCourseActivity">
+    tools:context=".activities.JavaScriptCourseActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30sp"
-            android:text="HTML Course"
+            android:text="JavaScript Course"
             android:textColor="@color/white"
             android:textSize="24sp"
 
@@ -92,7 +92,7 @@
             android:id="@+id/tv_topicHeader"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="HTML Course Outline"
+            android:text="JavaScript Course Outline"
             android:textColor="#ffff"
             android:background="@color/colorPrimaryDark"
             android:textSize="14sp"
@@ -102,12 +102,11 @@
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
             <TextView
                 android:id="@+id/tv_topicNotes"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@string/htmlCourseOutline"
+                android:text="@string/javaScriptCourseOutline"
                 />
         </ScrollView>
     </LinearLayout>

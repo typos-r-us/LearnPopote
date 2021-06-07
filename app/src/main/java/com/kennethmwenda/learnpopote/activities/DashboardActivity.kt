@@ -1,11 +1,14 @@
 package com.kennethmwenda.learnpopote.activities
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.kennethmwenda.learnpopote.R
@@ -17,6 +20,12 @@ import java.util.ArrayList
 class DashboardActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // Try to hide system navbar by setting fullscreen activity. Hides only status bar, not nav
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        // End hide system navbar by setting fullscreen activity
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
         // Set user name or dashboard welcome text
@@ -42,7 +51,9 @@ class DashboardActivity : AppCompatActivity(){
                 Toast.makeText(this, "Clicked on HTML", Toast.LENGTH_SHORT).show()
             }
             if (position == 1) {
-                Toast.makeText(this, "Clicked on JavaScript", Toast.LENGTH_LONG).show()
+                val intent = Intent(this,JavaScriptCourseActivity::class.java)
+                startActivity(intent)
+                Toast.makeText(this, "Clicked on JavaScript", Toast.LENGTH_SHORT).show()
             }
             if (position == 2) {
                 Toast.makeText(this, "Clicked on CSS", Toast.LENGTH_LONG).show()
