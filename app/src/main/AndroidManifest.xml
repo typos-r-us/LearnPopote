@@ -11,12 +11,10 @@
         android:roundIcon="@drawable/gradcap"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnPopote">
-        <activity
-            android:name=".activities.JavaScriptCourseActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_java_script_course"
-            android:theme="@style/Theme.LearnPopote.Fullscreen"></activity>
-        <activity android:name=".activities.HtmlCourseActivity" />
+        <activity android:name=".activities.SplashScreen">
+
+        </activity>
+        <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.SplashScreen" />
-        <activity android:name=".activities.MainActivity" />
-
+        <activity android:name=".activities.JavaScriptCourseActivity" />
+        <activity android:name=".activities.HtmlCourseActivity" />
+        <activity android:name=".activities.UserProfile"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
