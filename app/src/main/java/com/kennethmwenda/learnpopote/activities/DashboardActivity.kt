@@ -11,6 +11,12 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.ismaeldivita.chipnavigation.ChipNavigationBar
 import com.kennethmwenda.learnpopote.R
 import com.kennethmwenda.learnpopote.adapters.CourseItemAdapter
 import com.kennethmwenda.learnpopote.models.CourseItemModel
@@ -18,9 +24,12 @@ import kotlinx.android.synthetic.main.activity_dashboard.*
 import java.util.ArrayList
 
 class DashboardActivity : AppCompatActivity(){
+    var rootRef = FirebaseDatabase.getInstance().reference
+    var usersDataRef = rootRef.child("usersData")
+    var currentUser = FirebaseAuth.getInstance().currentUser
+    var currentUserId = currentUser?.uid
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         // Try to hide system navbar by setting fullscreen activity.
         hideSystemUI()
         requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -29,10 +38,34 @@ class DashboardActivity : AppCompatActivity(){
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
-        // Set user name or dashboard welcome text
-        val sharedPrefs = getSharedPreferences("userMap",Context.MODE_PRIVATE)
-        val _userName: String? = sharedPrefs.getString("fname",", welcome.")
-        tv_userName.text=_userName
+        // Set user name or dashboard welcome text from Firebase
+        //===== old implementation. did not work :-( =====//
+        // val sharedPrefs = getSharedPreferences("userMap",Context.MODE_PRIVATE)
+        // val _userName: String? = sharedPrefs.getString("fname",", welcome.")
+        //===== end old implementation. did not work :-( =====//
+        //===== new implementation. will this work :-( =====//
+        if (currentUserId!=null){
+            usersDataRef.child(currentUserId.toString()).addListenerForSingleValueEvent( object: ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    // TODO("Not yet implemented")
+                    val currentUserName = snapshot.child("userName").value.toString()
+                    val currentUserEmail = snapshot.child("userEmail").value.toString()
+                    val currentUserPhone = snapshot.child("userPhone").value.toString()
+
+                    // Haya, sasa get the first name using regex and put in the userName tv
+                    val fName = currentUserName.split("\\s".toRegex())[0]
+                    tv_userName.text=fName
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    // Do nothing: TODO("Not yet implemented")
+                }
+            })
+        }else{
+            // do something if the user is null
+            tv_userName.text="welcome."
+        }
+        //===== new implementation. This worked!! YAY :-D =====//
+        // tv_userName.text=_userName
         // Set list view for Course selection
         val listView = findViewById<ListView>(R.id.lv_coursesList)
         val list = ArrayList<CourseItemModel>() //mutableListOf<CourseItemModel>()
@@ -73,13 +106,30 @@ class DashboardActivity : AppCompatActivity(){
         etSearch.addTextChangedListener( object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                arrayAdapter!!.filter.filter(s)
+                arrayAdapter.filter.filter(s)
             }
             override fun afterTextChanged(s: Editable) {}
         })
+        // Bottom Nav buttons
+        val bottomNav : ChipNavigationBar = findViewById(R.id.bottomChip)
+        bottomNav.setOnItemSelectedListener { item->
+            when(item){
+                R.id.mn_logout->{
+                    // go to login page, clear all activities, sign out user
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    FirebaseAuth.getInstance().signOut()
+                }
+                R.id.mn_profile->{
+                    // Go to user profile page
+                }
+            }
+            true
+        }
 
     }
-    fun hideSystemUI(){
+    private fun hideSystemUI(){
         window.decorView.systemUiVisibility = (
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
