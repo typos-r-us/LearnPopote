@@ -49,10 +49,7 @@ class DashboardActivity : AppCompatActivity(){
                 override fun onDataChange(snapshot: DataSnapshot) {
                     // TODO("Not yet implemented")
                     val currentUserName = snapshot.child("userName").value.toString()
-                    val currentUserEmail = snapshot.child("userEmail").value.toString()
-                    val currentUserPhone = snapshot.child("userPhone").value.toString()
-
-                    // Haya, sasa get the first name using regex and put in the userName tv
+                   // Haya, sasa get the first name using regex and put in the userName tv
                     val fName = currentUserName.split("\\s".toRegex())[0]
                     tv_userName.text=fName
                 }
@@ -123,6 +120,8 @@ class DashboardActivity : AppCompatActivity(){
                 }
                 R.id.mn_profile->{
                     // Go to user profile page
+                    val intent = Intent(this, UserProfile::class.java)
+                    startActivity(intent)
                 }
             }
             true

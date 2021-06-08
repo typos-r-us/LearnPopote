@@ -39,6 +39,8 @@
             android:id="@+id/vp_ViewPager1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:backgroundTint="#F9F7FA"
+            android:background="#F9F7FA"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintHeight_percent=".85"
 
@@ -51,6 +53,8 @@
             android:id="@+id/tl_TabLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#F9F7FA"
+            android:background="#F9F7FA"
             app:layout_constraintVertical_bias="0"
 
             app:layout_constraintBottom_toBottomOf="parent"

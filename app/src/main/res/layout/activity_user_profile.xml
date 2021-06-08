@@ -56,6 +56,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/cl_top"
+        android:background="#F9F7FA"
+        android:backgroundTint="#F9F7FA"
         android:padding="20dp"
         android:orientation="vertical">
 
@@ -67,8 +69,10 @@
             android:layout_marginBottom="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pr_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:editable="false"
                 android:drawableLeft="@drawable/ic_action_profile"
                 android:drawablePadding="15dp"
                 android:text="Kenneth Mwenda"/>
@@ -80,8 +84,10 @@
             android:layout_marginBottom="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pr_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:editable="false"
                 android:drawableLeft="@drawable/ic_action_email"
                 android:drawablePadding="15dp"
                 android:text="kennethmwenda@gmail.com"/>
@@ -93,8 +99,10 @@
             android:layout_marginBottom="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pr_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:editable="false"
                 android:drawableLeft="@drawable/ic_action_phone"
                 android:drawablePadding="15dp"
                 android:text="+254720376759"/>
