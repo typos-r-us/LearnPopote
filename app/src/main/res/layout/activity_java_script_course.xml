@@ -78,7 +78,7 @@
             android:id="@+id/yt_player"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            app:videoId="cnt_rMA1pe0"
+            app:videoId="W6NZfCO5SIk"
             app:autoPlay="false"
             app:showYouTubeButton="true"
             app:handleNetworkEvents="true"
