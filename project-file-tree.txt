@@ -9,7 +9,8 @@ C:.
 |   local.properties
 |   project-file-tree.txt
 |   README.md
-|   settings.gradle             
+|   settings.gradle
+|
 +---app
 |   |   .gitignore
 |   |   build.gradle
@@ -20,7 +21,7 @@ C:.
 |       +---androidTest
 |       |   \---java
 |       |       \---com
-|       |           \---kennethmwenda <!-- Please rename this appropriately or import the project into your own workspace -->
+|       |           \---kennethmwenda
 |       |               \---learnpopote
 |       |                       ExampleInstrumentedTest.kt
 |       |                       
@@ -29,37 +30,66 @@ C:.
 |       |   |   
 |       |   +---java
 |       |   |   \---com
-|       |   |       \---kennethmwenda <!-- Please rename this appropriately or import the project into your own workspace -->
+|       |   |       +---google
+|       |   |       |   \---android
+|       |   |       |       \---youtube
+|       |   |       |           \---player
+|       |   |       |                   YoutubePlayerLP.kt
+|       |   |       |                   
+|       |   |       \---kennethmwenda
 |       |   |           \---learnpopote
-|       |   |               |   DashboardActivity.kt
-|       |   |               |   DrawerItemAdapter.kt
-|       |   |               |   DrawerItemModel.kt
-|       |   |               |   DynamicRecyclerViewAdapter.kt
-|       |   |               |   DynamicRecyclerViewModel.kt
-|       |   |               |   LoginActivity.kt
-|       |   |               |   LoginFragmentAdapter.kt
-|       |   |               |   LoginTabFragment.kt
-|       |   |               |   MainActivity.kt
-|       |   |               |   OnBoardingFragment1.kt
-|       |   |               |   OnBoardingFragment2.kt
-|       |   |               |   OnBoardingFragment3.kt
-|       |   |               |   SignUpTabFragment.kt
-|       |   |               |   SplashScreen.kt
-|       |   |               |   StaticRecyclerViewAdapter.kt
-|       |   |               |   StaticRecyclerViewModel.kt
-|       |   |               |   
-|       |   |               \---dynamicRVinterface
-|       |   |                       LoadMore.kt
+|       |   |               +---activities
+|       |   |               |       DashboardActivity.kt
+|       |   |               |       HtmlCourseActivity.kt
+|       |   |               |       JavaScriptCourseActivity.kt
+|       |   |               |       LoginActivity.kt
+|       |   |               |       SplashScreen.kt
+|       |   |               |       UserProfile.kt
+|       |   |               |       
+|       |   |               +---adapters
+|       |   |               |       CourseItemAdapter.kt
+|       |   |               |       DrawerItemAdapter.kt
+|       |   |               |       DynamicRecyclerViewAdapter.kt
+|       |   |               |       LoginFragmentAdapter.kt
+|       |   |               |       StaticRecyclerViewAdapter.kt
+|       |   |               |       UserInfoAdapter.kt
+|       |   |               |       
+|       |   |               +---dynamicRVinterface
+|       |   |               |       LoadMore.kt
+|       |   |               |       UpdateRecyclerView.kt
+|       |   |               |       
+|       |   |               +---fragments
+|       |   |               |       LoginTabFragment.kt
+|       |   |               |       OnBoardingFragment1.kt
+|       |   |               |       OnBoardingFragment2.kt
+|       |   |               |       OnBoardingFragment3.kt
+|       |   |               |       ProfileFragment.kt
+|       |   |               |       SignUpTabFragment.kt
+|       |   |               |       
+|       |   |               \---models
+|       |   |                       CourseItemModel.kt
+|       |   |                       DrawerItemModel.kt
+|       |   |                       DynamicRecyclerViewModel.kt
+|       |   |                       StaticRecyclerViewModel.kt
+|       |   |                       UserInfoModel.kt
 |       |   |                       
 |       |   \---res
 |       |       +---anim
+|       |       |       fab_close_animation.xml
+|       |       |       fab_open_animation.xml
 |       |       |       fadeinanimation.xml
+|       |       |       rotate_clockwise.xml
+|       |       |       rotate_counter_clockwise.xml
 |       |       |       
 |       |       +---drawable
 |       |       |       app_bg.png
 |       |       |       app_bg_1.png
 |       |       |       button_design.xml
 |       |       |       circle.xml
+|       |       |       css.png
+|       |       |       dart.png
+|       |       |       dartlang.png
+|       |       |       databases.png
 |       |       |       dynamicrecyclerviewmodel_bg.xml
 |       |       |       edittext_design.xml
 |       |       |       elearn1.png
@@ -67,17 +97,64 @@ C:.
 |       |       |       elearn3.png
 |       |       |       elipse.xml
 |       |       |       facebook_logo_icon.png
+|       |       |       git.png
 |       |       |       google_logo_color.png
 |       |       |       google_plus_black.png
 |       |       |       gradcap.png
+|       |       |       html.png
+|       |       |       ic_arrow_down.xml
 |       |       |       ic_launcher_background.xml
 |       |       |       inner_bg.xml
+|       |       |       java.png
+|       |       |       javascript.png
+|       |       |       jsreact.png
+|       |       |       kotlin.png
+|       |       |       php.png
+|       |       |       phpee.png
 |       |       |       search_bg.xml
+|       |       |       spinner_background.xml
 |       |       |       staticrecyclerviewselected_bg.xml
 |       |       |       staticrecyclerview_bg.xml
 |       |       |       tab1.png
 |       |       |       tab2_white.png
 |       |       |       tab3.png
+|       |       |       webdev.png
+|       |       |       
+|       |       +---drawable-anydpi
+|       |       |       ic_action_course.xml
+|       |       |       ic_action_email.xml
+|       |       |       ic_action_exit.xml
+|       |       |       ic_action_home.xml
+|       |       |       ic_action_logout.xml
+|       |       |       ic_action_name.xml
+|       |       |       ic_action_next.xml
+|       |       |       ic_action_phone.xml
+|       |       |       ic_action_previous.xml
+|       |       |       ic_action_profile.xml
+|       |       |       
+|       |       +---drawable-hdpi
+|       |       |       ic_action_course.png
+|       |       |       ic_action_email.png
+|       |       |       ic_action_exit.png
+|       |       |       ic_action_home.png
+|       |       |       ic_action_logout.png
+|       |       |       ic_action_name.png
+|       |       |       ic_action_next.png
+|       |       |       ic_action_phone.png
+|       |       |       ic_action_previous.png
+|       |       |       ic_action_profile.png
+|       |       |       
+|       |       +---drawable-mdpi
+|       |       |       ic_action_course.png
+|       |       |       ic_action_email.png
+|       |       |       ic_action_exit.png
+|       |       |       ic_action_home.png
+|       |       |       ic_action_logout.png
+|       |       |       ic_action_name.png
+|       |       |       ic_action_next.png
+|       |       |       ic_action_phone.png
+|       |       |       ic_action_previous.png
+|       |       |       ic_action_profile.png
 |       |       |       
 |       |       +---drawable-v24
 |       |       |       csharpprogramming.png
@@ -88,6 +165,30 @@ C:.
 |       |       |       search.png
 |       |       |       user.png
 |       |       |       
+|       |       +---drawable-xhdpi
+|       |       |       ic_action_course.png
+|       |       |       ic_action_email.png
+|       |       |       ic_action_exit.png
+|       |       |       ic_action_home.png
+|       |       |       ic_action_logout.png
+|       |       |       ic_action_name.png
+|       |       |       ic_action_next.png
+|       |       |       ic_action_phone.png
+|       |       |       ic_action_previous.png
+|       |       |       ic_action_profile.png
+|       |       |       
+|       |       +---drawable-xxhdpi
+|       |       |       ic_action_course.png
+|       |       |       ic_action_email.png
+|       |       |       ic_action_exit.png
+|       |       |       ic_action_home.png
+|       |       |       ic_action_logout.png
+|       |       |       ic_action_name.png
+|       |       |       ic_action_next.png
+|       |       |       ic_action_phone.png
+|       |       |       ic_action_previous.png
+|       |       |       ic_action_profile.png
+|       |       |       
 |       |       +---font
 |       |       |       antique_book_cover.otf
 |       |       |       baloo_thambi.xml
@@ -96,9 +197,12 @@ C:.
 |       |       |       
 |       |       +---layout
 |       |       |       activity_dashboard.xml
+|       |       |       activity_html_course.xml
+|       |       |       activity_java_script_course.xml
 |       |       |       activity_login.xml
-|       |       |       activity_main.xml
 |       |       |       activity_splash_screen.xml
+|       |       |       activity_user_profile.xml
+|       |       |       course_item_list.xml
 |       |       |       drawer_item.xml
 |       |       |       drawer_menu.xml
 |       |       |       dynamic_recycler_view_item_layout.xml
@@ -106,9 +210,16 @@ C:.
 |       |       |       fragment_on_boarding1.xml
 |       |       |       fragment_on_boarding2.xml
 |       |       |       fragment_on_boarding3.xml
+|       |       |       fragment_profile.xml
 |       |       |       login_tab_fragment.xml
+|       |       |       menu_header.xml
 |       |       |       signup_tab_fragment.xml
 |       |       |       static_recycler_view_items.xml
+|       |       |       
+|       |       +---menu
+|       |       |       courses_menu.xml
+|       |       |       nav_menu.xml
+|       |       |       profile_menu.xml
 |       |       |       
 |       |       +---mipmap-anydpi-v26
 |       |       |       ic_launcher.xml
@@ -138,10 +249,12 @@ C:.
 |       |       |       learn.json
 |       |       |       
 |       |       +---values
+|       |       |       attrs.xml
 |       |       |       colors.xml
 |       |       |       font_certs.xml
 |       |       |       preloaded_fonts.xml
 |       |       |       strings.xml
+|       |       |       styles.xml
 |       |       |       themes.xml
 |       |       |       
 |       |       \---values-night
@@ -150,12 +263,28 @@ C:.
 |       \---test
 |           \---java
 |               \---com
-|                   \---kennethmwenda <!-- Please rename this appropriately or import the project into your own workspace -->
+|                   \---kennethmwenda
 |                       \---learnpopote
 |                               ExampleUnitTest.kt
 |                               
-\---gradle
-    \---wrapper
-            gradle-wrapper.jar
-            gradle-wrapper.properties
-            
++---build
+|   \---kotlin
+|       \---sessions
++---gradle
+|   \---wrapper
+|           gradle-wrapper.jar
+|           gradle-wrapper.properties
+|           
+\---screenshots
+        Screenshot_1622636441.png
+        Screenshot_1622708261.png
+        Screenshot_1622708268.png
+        Screenshot_1622708274.png
+        Screenshot_1623147454.png
+        Screenshot_1623147479.png
+        Screenshot_1623147494.png
+        Screenshot_1623147505.png
+        Screenshot_1623147522.png
+        Screenshot_1623147541.png
+        Screenshot_1623148832.png
+        Screenshot_1623148836.png
