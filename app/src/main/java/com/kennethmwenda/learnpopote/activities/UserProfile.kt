@@ -69,6 +69,7 @@ class UserProfile : AppCompatActivity() {
                 R.id.mn_logout->{
                     // go to login page, clear all activities, sign out user
                     val intent = Intent(this, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // clears all past activities
                     startActivity(intent)
                     finish()
                     FirebaseAuth.getInstance().signOut()
