@@ -17,6 +17,10 @@ C:.
 |   |   google-services.json <!-- Please generate your own google-services.json file to enable access to firebase auth and database services -->
 |   |   proguard-rules.pro
 |   |
+|   +---libs
+|   |       YouTubeAndroidPlayerApi.jar  <!-- Please see [this link](https://stackoverflow.com/questions/18175397/add-youtube-data-api-to-android-studio) for more information. -->
+|   |
+|   |
 |   \---src
 |       +---androidTest
 |       |   \---java
